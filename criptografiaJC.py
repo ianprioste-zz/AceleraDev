@@ -2,9 +2,13 @@ import requests
 import json
 import hashlib
 
-codenation = requests.get('https://api.codenation.dev/v1/challenge/dev-ps/generate-data?token=b239bc9eb966a651dd325fb5937812f40f70ff84')
-dado = codenation.json()
+url_get = 'https://api.codenation.dev/v1/challenge/dev-ps/generate-data?token=b239bc9eb966a651dd325fb5937812f40f70ff84'
+url_post = 'https://api.codenation.dev/v1/challenge/dev-ps/submit-solution?token=b239bc9eb966a651dd325fb5937812f40f70ff84'
 
+response = requests.get(url_get)
+dado = response.json()
+
+header = response.headers
 token = dado['token']
 caracteres = 'abcdefghijklmnopqrstuvwxyz'
 casas = dado['numero_casas']
@@ -45,4 +49,15 @@ for letra in cifrado:
 
 resumo = hashlib.sha1(decifrado.encode('utf-8')).hexdigest()
 
-print('token: ', token,'\ncasas: ',casas,'\ndecifrado: ',decifrado,'\ncifrado: ',cifrado,'\nresumo: ', resumo)
+answer ={'numero_casas':casas,'token':token,'cifrado':cifrado,'decifrado':decifrado,'resumo_criptografico':resumo}
+answer = json.dumps(answer)
+print(answer)
+
+arquivo = open ('answer.json','w')
+arquivo.write(answer)
+arquivo.close()
+
+files={'answer':(open('answer.json','rb'))}
+r = requests.post(url_post, files=files)
+print(r.status_code)
+print(r.text)
