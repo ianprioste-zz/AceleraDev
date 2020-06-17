@@ -1,44 +1,56 @@
-# AceleraDev-C-
-Criptografia de Júlio César
+# Instalando e configurando VSCode para Java
 
-Segundo o Wikipedia, criptografia ou criptologia (em grego: kryptós, “escondido”, e gráphein, “escrita”) é o estudo e prática de princípios e técnicas para comunicação segura na presença de terceiros, chamados “adversários”. Mas geralmente, a criptografia refere-se à construção e análise de protocolos que impedem terceiros, ou o público, de lerem mensagens privadas. Muitos aspectos em segurança da informação, como confidencialidade, integridade de dados, autenticação e não-repúdio são centrais à criptografia moderna. Aplicações de criptografia incluem comércio eletrônico, cartões de pagamento baseados em chip, moedas digitais, senhas de computadores e comunicações militares. Das Criptografias mais curiosas na história da humanidade podemos citar a criptografia utilizada pelo grande líder militar romano Júlio César para comunicar com os seus generais. Essa criptografia se baseia na substituição da letra do alfabeto avançado um determinado número de casas. Por exemplo, considerando o número de casas = 3:
+## 1 - Instalar Vscode
+    https://aka.ms/vscode-java-installer-win 
 
-Normal: a ligeira raposa marrom saltou sobre o cachorro cansado
+    Se já tiver instalado, não precisa instalar de novo. Mas deverá exectutar o passo 4. 
 
-Cifrado: d oljhlud udsrvd pduurp vdowrx vreuh r fdfkruur fdqvdgr
+## 2 - Instalar JDK
+    https://www.oracle.com/java/technologies/javase-downloads.html
 
-Regras
-As mensagens serão convertidas para minúsculas tanto para a criptografia quanto para descriptografia.
-No nosso caso os números e pontos serão mantidos, ou seja:
-Normal: 1a.a
+## 3- Configurar variáveis JAVA_HOME e JRE_HOME
+    Acessar > Painel de Controle\Sistema e Segurança\Sistema => Configurações avançadas do sistema => Variáveis de Ambientes => Novo
+    Nome da variável: JAVA_HOME
+    Valor da Variável: C:\Program Files\Java\jdk1.8.0_251
 
-Cifrado: 1d.d
+    Nome da variável:JRE_HOME
+    C:\Program Files\Java\jre1.8.0_251
 
-Escrever programa, em qualquer linguagem de programação, que faça uma requisição HTTP para a url abaixo:
+## 4 - Instalar extenções - Java Extension Pack
+    Só executar este passo se pulou a primeira instrução
+    vscode:extension/vscjava.vscode-java-pack
 
-https://api.codenation.dev/v1/challenge/dev-ps/generate-data?token=SEU_TOKEN
-Para encontrar o seu token , acesse a plataforma Codenation, faça o login e a informação estará na tela, conforme no exemplo abaixo:
+## 5 - Instalar Git
+    https://gitforwindows.org/
 
-O resultado da requisição vai ser um JSON conforme o exemplo:
+## 6 - Instalar Oh My Zsh  (Opcional)
+   
+    Terminal Vscode: 
+        git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
+        ~/.bash_it/install.sh
 
-{
-	"numero_casas": 10,
-	"token":"token_do_usuario",
-	"cifrado": "texto criptografado",
-	"decifrado": "aqui vai o texto decifrado",
-	"resumo_criptografico": "aqui vai o resumo"
-}
-O primeiro passo é você salvar o conteúdo do JSON em um arquivo com o nome answer.json, que irá usar no restante do desafio.
+    Documentação    
+    https://github.com/Bash-it/bash-it#installation 
 
-Você deve usar o número de casas para decifrar o texto e atualizar o arquivo JSON, no campo decifrado. O próximo passo é gerar um resumo criptográfico do texto decifrado usando o algoritmo sha1 e atualizar novamente o arquivo JSON. OBS: você pode usar qualquer biblioteca de criptografia da sua linguagem de programação favorita para gerar o resumo sha1 do texto decifrado.
 
-Seu programa deve submeter o arquivo atualizado para correção via POST para a API:
+## 7 - Instalar Docker
+    https://www.docker.com/products/docker-desktop  
 
-https://api.codenation.dev/v1/challenge/dev-ps/submit-solution?token=SEU_TOKEN
-OBS: a API espera um arquivo sendo enviado como multipart/form-data, como se fosse enviado por um formulário HTML, com um campo do tipo file com o nome answer. Considere isso ao enviar o arquivo.
+    Instalar extensão 
+    https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker 
 
-O resultado da submissão vai ser sua nota ou o erro correspondente. Você pode submeter quantas vezes achar necessário, mas a API não vai permitir mais de uma submissão por minuto.
+## 8 - Instalar PostgreSQL 
+    https://www.enterprisedb.com/downloads/postgres-postgresql-downloads 
 
-OBS
-Neste estágio da aceleração não solicitamos que você nos envie o código do programa que você criou, mas recomendamos que você guarde uma cópia pois o mesmo pode ser solicitado nas próximas fases do processo.
+    Instalar extensão
+    https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker
 
+
+## 9 - Criando projeto Java
+    No vscode selecionar ctrl+shift+p
+    > Java Create Java Project
+
+# Anotações Aulas
+
+## Mapa mental Primeiro Módulo
+    https://whimsical.com/2fXacrjYMZvUhWAnUS3waj
