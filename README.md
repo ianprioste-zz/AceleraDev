@@ -1,12 +1,12 @@
 # Instalando e configurando VSCode para Java
 
 ## 1 - Instalar Vscode
-    [https://aka.ms/vscode-java-installer-win] (https://aka.ms/vscode-java-installer-win)
+    https://aka.ms/vscode-java-installer-win 
 
     Se já tiver instalado, não precisa instalar de novo. Mas deverá exectutar o passo 4. 
 
 ## 2 - Instalar JDK
-    [https://www.oracle.com/java/technologies/javase-downloads.html](https://www.oracle.com/java/technologies/javase-downloads.html)
+    https://www.oracle.com/java/technologies/javase-downloads.html
 
 ## 3- Configurar variáveis JAVA_HOME e JRE_HOME
     Acessar > Painel de Controle\Sistema e Segurança\Sistema => Configurações avançadas do sistema => Variáveis de Ambientes => Novo
@@ -21,7 +21,7 @@
     vscode:extension/vscjava.vscode-java-pack
 
 ## 5 - Instalar Git
-    [https://gitforwindows.org/](https://gitforwindows.org/)
+    https://gitforwindows.org/
 
 ## 6 - Instalar Oh My Zsh  (Opcional)
    
@@ -30,20 +30,20 @@
         ~/.bash_it/install.sh
 
     Documentação    
-    [https://github.com/Bash-it/bash-it#installation](https://github.com/Bash-it/bash-it#installation)
+    https://github.com/Bash-it/bash-it#installation 
 
 
 ## 7 - Instalar Docker
-    [https://www.docker.com/products/docker-desktop] (https://www.docker.com/products/docker-desktop) 
+    https://www.docker.com/products/docker-desktop  
 
     Instalar extensão 
-    [https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) 
+    https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker 
 
 ## 8 - Instalar PostgreSQL 
-    [https://www.enterprisedb.com/downloads/postgres-postgresql-downloads](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) 
+    https://www.enterprisedb.com/downloads/postgres-postgresql-downloads 
 
     Instalar extensão
-    [https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
+    https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker
 
 
 ## 9 - Criando projeto Java
@@ -53,4 +53,4 @@
 # Anotações Aulas
 
 ## Mapa mental Primeiro Módulo
-    [Whimsical](https://whimsical.com/2fXacrjYMZvUhWAnUS3waj)
+    https://whimsical.com/2fXacrjYMZvUhWAnUS3waj
